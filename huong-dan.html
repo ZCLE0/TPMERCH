@@ -1,0 +1,237 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Hướng dẫn sử dụng · TP MERCH</title>
+<meta name="description" content="Móc khóa NFC TP MERCH (THPT Trần Phú) chưa có link sẵn. Hướng dẫn tự ghi link trang cá nhân của bạn vào móc khóa bằng app NFC Tools, chạm thử và bảo quản.">
+<meta name="theme-color" content="#ffffff">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%231d1d1f'/%3E%3Crect x='12' y='14' width='40' height='36' rx='9' fill='%23ffffff'/%3E%3Crect x='18' y='20' width='28' height='24' rx='5' fill='%2306b6d4'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300;400;500;600;700;800&display=swap">
+<style>
+:root{
+  --blue:#0891b2;--fg:#062630;--t2:rgba(4,47,58,.68);--t3:rgba(4,47,58,.46);
+  --line:rgba(8,95,120,.12);--line-2:rgba(8,95,120,.22);--soft:rgba(8,95,120,.045);
+  --surface:#fff;--shadow:inset 0 0 0 1px rgba(8,95,120,.1),0 1px 2px rgba(4,47,58,.04),0 30px 70px -40px rgba(4,47,58,.28);
+  --font:"Montserrat",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;--ease:cubic-bezier(.22,1,.36,1);
+  --gutter:clamp(16px,4vw,40px);
+}
+*{box-sizing:border-box}
+html{background:#f6f8fc;-webkit-text-size-adjust:100%;scroll-padding-top:80px}
+body{margin:0;font-family:var(--font);color:var(--fg);font-size:15px;line-height:1.65;-webkit-font-smoothing:antialiased;
+  background:radial-gradient(1000px 560px at 80% -10%,rgba(8,95,120,.07),transparent 60%),linear-gradient(180deg,#fff 0%,#f8f9fd 55%,#eef2fa 100%);background-color:#f6f8fc}
+a{color:var(--blue);font-weight:600;text-underline-offset:3px}
+.wrap{max-width:860px;margin:0 auto;padding-inline:var(--gutter)}
+header{position:sticky;top:0;z-index:5;background:rgba(255,255,255,.85);-webkit-backdrop-filter:blur(16px);backdrop-filter:blur(16px);border-bottom:1px solid var(--line)}
+.bar{display:flex;justify-content:space-between;align-items:center;height:60px}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--fg);font-size:13px;font-weight:700;letter-spacing:.1em}
+.brand i{width:22px;height:20px;border-radius:6px;background:var(--blue);display:grid;place-items:center}
+.brand i::after{content:"";width:12px;height:10px;border-radius:3px;background:#fff}
+.brand span{color:var(--t3);font-weight:500}
+.back{font-size:13px;text-decoration:none;padding:8px 14px;border-radius:999px;background:var(--blue);color:#fff}
+.hero{padding:clamp(32px,6vw,64px) 0 clamp(16px,3vw,24px)}
+.eyebrow{font-size:11px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--t3)}
+h1{margin:12px 0 0;font-size:clamp(30px,5vw,46px);line-height:1.05;letter-spacing:-.03em}
+h1 b{font-weight:300;background:linear-gradient(180deg,#0891b2,#22d3ee);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+.lede{color:var(--t2);max-width:56ch;margin:14px 0 0;font-size:16px}
+.alert{display:grid;grid-template-columns:36px minmax(0,1fr);gap:14px;align-items:start;margin-top:22px;padding:16px 18px;border-radius:18px;background:var(--blue);color:#fff;box-shadow:0 20px 40px -24px rgba(8,95,120,.7)}
+.alert svg{width:36px;height:36px}
+.alert b{display:block;font-size:15.5px}
+.alert span{display:block;font-size:13.5px;opacity:.85;margin-top:2px}
+.flow{list-style:none;margin:16px 0 0;padding:0;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;counter-reset:f}
+.flow li{counter-increment:f;position:relative;padding:14px 14px 13px;border-radius:16px;background:var(--surface);box-shadow:var(--shadow)}
+.flow li a{text-decoration:none;color:inherit;display:block}
+.flow li small{display:block;font-size:10.5px;font-weight:700;letter-spacing:.16em;color:var(--t3)}
+.flow li small::before{content:"BƯỚC " counter(f)}
+.flow li b{display:block;font-size:14.5px;margin-top:3px}
+.flow li span{display:block;font-size:12.5px;color:var(--t2);margin-top:2px;line-height:1.45}
+@media (max-width:620px){.flow{grid-template-columns:minmax(0,1fr)}}
+section.card{background:var(--surface);border-radius:22px;box-shadow:var(--shadow);padding:clamp(20px,3.6vw,34px);margin:18px 0;scroll-margin-top:80px}
+h2{margin:0;font-size:clamp(20px,2.6vw,24px);letter-spacing:-.02em;display:flex;align-items:center;gap:12px}
+h2 .n{flex:none;width:30px;height:30px;border-radius:9px;background:var(--blue);color:#fff;font-size:14px;display:grid;place-items:center}
+h3{font-size:15px;margin:22px 0 6px}
+p{margin:10px 0 0}
+.muted{color:var(--t2)}
+ol.steps{counter-reset:s;list-style:none;margin:18px 0 0;padding:0;display:flex;flex-direction:column;gap:14px}
+ol.steps > li{counter-increment:s;display:grid;grid-template-columns:30px minmax(0,1fr);gap:12px;align-items:start}
+ol.steps > li::before{content:counter(s);width:30px;height:30px;border-radius:50%;background:var(--soft);box-shadow:inset 0 0 0 1px var(--line-2);display:grid;place-items:center;font-size:13px;font-weight:700}
+ol.steps > li > div{padding-top:3px}
+ol.steps small{display:block;font-size:12.5px;color:var(--t3);margin-top:4px;line-height:1.5}
+.ui{display:flex;flex-wrap:wrap;align-items:center;gap:6px;margin-top:8px}
+.ui .arrow{color:var(--t3);font-size:12px}
+kbd{font:600 12.5px var(--font);padding:3px 9px;border-radius:8px;background:#fff;box-shadow:inset 0 0 0 1px var(--line-2),0 1px 0 var(--line-2);white-space:nowrap;color:var(--fg)}
+kbd.hot{background:var(--blue);color:#fff;box-shadow:none}
+.store{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}
+.store a{display:inline-flex;align-items:center;gap:8px;font-size:13px;padding:9px 14px;border-radius:12px;background:var(--fg);color:#fff;text-decoration:none}
+.store a svg{width:16px;height:16px}
+.two{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin-top:16px}
+.tile{border-radius:16px;padding:16px;background:var(--soft);box-shadow:inset 0 0 0 1px var(--line)}
+.tile > b{display:block;font-size:14px}
+.tile p b{color:var(--fg)}
+.tile p{font-size:13.5px;color:var(--t2);margin-top:6px}
+.apps{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:10px;margin-top:14px}
+.app{border-radius:14px;padding:12px 14px;box-shadow:inset 0 0 0 1px var(--line);font-size:13px;color:var(--t2)}
+.app > b{display:block;color:var(--fg);font-size:13.5px;margin-bottom:2px}
+.warn{margin-top:16px;border-radius:14px;padding:12px 14px;font-size:13.5px;background:rgba(8,95,120,.07);box-shadow:inset 0 0 0 1px var(--line-2)}
+.warn b{color:var(--fg)}
+.warn.red{background:#fef3f2;box-shadow:inset 0 0 0 1px #fecdca;color:#7a271a}
+.warn.red b{color:#b42318}
+.figure{display:flex;justify-content:center;margin:18px 0 4px}
+.figure svg{width:min(320px,100%);height:auto}
+ul.check{list-style:none;padding:0;margin:14px 0 0;display:flex;flex-direction:column;gap:8px}
+ul.check li{display:grid;grid-template-columns:20px minmax(0,1fr);gap:10px;font-size:14px;color:var(--t2)}
+ul.check li::before{content:"";width:18px;height:18px;margin-top:3px;border-radius:6px;background:var(--blue) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M5 12.5l4.5 4.5L19 7.5'/%3E%3C/svg%3E") center/12px no-repeat}
+ul.check b{color:var(--fg)}
+.src{font-size:12px;color:var(--t3);margin-top:18px}
+footer{color:var(--t3);font-size:12px;border-top:1px solid var(--line);margin-top:40px}
+footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px;padding-block:22px 30px}
+@media (max-width:620px){.two{grid-template-columns:minmax(0,1fr)}}
+.in{animation:inUp .8s var(--ease) both;animation-delay:calc(var(--d,0) * 1ms)}
+@keyframes inUp{from{opacity:0;transform:translateY(18px)}}
+
+</style>
+<link rel="stylesheet" href="assets/tp.css">
+<style>
+header{background:var(--header-bg)!important;-webkit-backdrop-filter:saturate(180%) blur(20px);backdrop-filter:saturate(180%) blur(20px);border-bottom:1px solid rgba(0,0,0,.06)!important}
+.bar{height:52px!important}
+.brand{color:var(--ink)!important;font-size:15px!important;letter-spacing:-.01em!important}
+.brand span{color:var(--ink-3)!important}
+.brand i{background:var(--ink)!important;width:22px!important;height:22px!important;border-radius:7px!important}
+.brand i::after{background:var(--tp-cyan)!important;height:9px!important}
+.back{background:var(--tp-accent)!important;color:#fff!important;font-weight:600;padding:7px 15px!important;transition:transform .16s var(--ease-out),background-color .2s ease}
+.back:active{transform:scale(.97)}
+h1{font-size:clamp(36px,5.4vw,60px)!important}
+h1 b{background:none!important;-webkit-text-fill-color:currentColor!important;color:var(--tp-accent)!important;font-weight:700!important}
+.alert{background:var(--ink)!important;box-shadow:none!important}
+.flow li{background:var(--bg-2)!important;box-shadow:none!important}
+section.card{background:#fff!important;box-shadow:inset 0 0 0 1px var(--hair-soft)!important;border-radius:24px!important}
+h2 .n{background:var(--ink)!important;color:#fff!important}
+kbd{box-shadow:inset 0 0 0 1px var(--hair)!important}
+kbd.hot{background:var(--tp-accent)!important;color:#fff!important}
+.tile,.warn,.app{background:var(--bg-2)!important;box-shadow:none!important}
+.store a{background:var(--ink)!important;color:#fff!important}
+footer{background:var(--bg-2)!important;border-top:0!important}
+</style>
+</head>
+<body>
+<header><div class="wrap bar">
+  <a class="brand" href="./"><i aria-hidden="true"></i>TP&nbsp;<span>Merch</span></a>
+  <a class="back" href="./">Về trang đặt hàng</a>
+</div></header>
+
+<main class="wrap">
+  <div class="hero">
+    <div class="eyebrow in">Hướng dẫn sử dụng</div>
+    <h1 class="in" style="--d:80">Móc khóa NFC <b>TP MERCH</b></h1>
+    <p class="lede in" style="--d:160">Bên trong móc khóa có một chip NFC. Bạn ghi link trang cá nhân của mình vào chip, sau đó ai chạm điện thoại vào móc khóa cũng mở ngay trang của bạn.</p>
+    <div class="alert in" style="--d:220" role="note">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9.5"/><path d="M12 7.5v5.5M12 16.5v.01"/></svg>
+      <div><b>Móc khóa CHƯA có link sẵn.</b><span>Khi nhận hàng, bạn cần tự ghi link vào móc khóa một lần theo 3 bước dưới đây (khoảng 2 phút, miễn phí). Chưa ghi thì chạm vào sẽ không mở gì cả.</span></div>
+    </div>
+    <ol class="flow in" style="--d:280">
+      <li><a href="#lay-link"><small></small><b>Lấy link của bạn</b><span>Sao chép link trang Instagram, Facebook, TikTok…</span></a></li>
+      <li><a href="#ghi"><small></small><b>Ghi link vào móc khóa</b><span>Dùng app miễn phí NFC Tools</span></a></li>
+      <li><a href="#cham"><small></small><b>Chạm thử</b><span>Chạm điện thoại vào móc khóa là mở trang</span></a></li>
+    </ol>
+  </div>
+
+  <section class="card" id="lay-link">
+    <h2><span class="n">1</span>Lấy link trang của bạn</h2>
+    <p class="muted">Mỗi móc khóa lưu được <b>một</b> link. Chọn trang bạn muốn bạn bè mở khi chạm, rồi sao chép link đó. Vị trí nút có thể khác một chút tùy phiên bản app.</p>
+    <div class="apps">
+      <div class="app"><b>Instagram</b>Trang cá nhân → Chia sẻ trang cá nhân → Sao chép liên kết</div>
+      <div class="app"><b>Facebook</b>Trang cá nhân → nút ••• → Sao chép liên kết</div>
+      <div class="app"><b>TikTok</b>Hồ sơ → nút chia sẻ → Sao chép liên kết</div>
+      <div class="app"><b>Threads</b>Hồ sơ → Chia sẻ trang cá nhân → Sao chép liên kết</div>
+      <div class="app"><b>Locket</b>Mở app → mục chia sẻ link mời bạn bè → Sao chép</div>
+    </div>
+    <div class="warn"><b>Muốn chạm là ra nhiều mạng xã hội?</b> Tạo một trang gộp link (Linktree, Beacons, Bio.link… đều có bản miễn phí), dán các link ở trên vào đó, rồi ghi link của trang gộp vào móc khóa. Link ngắn cũng giúp ghi vào chip dễ hơn.</div>
+  </section>
+
+  <section class="card" id="ghi">
+    <h2><span class="n">2</span>Ghi link vào móc khóa bằng NFC Tools</h2>
+    <p class="muted">Làm một lần là xong. Tên nút trong app có thể hiện bằng tiếng Việt hoặc tiếng Anh, nên bên dưới ghi cả hai.</p>
+    <ol class="steps">
+      <li><div><b>Tải app NFC Tools</b> (nhà phát triển <b>wakdev</b>, miễn phí).
+        <div class="store">
+          <a href="https://www.wakdev.com/en/apps/nfc-tools-ios.html" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16.4 12.6c0-2.4 2-3.6 2.1-3.7-1.2-1.7-3-1.9-3.6-2-1.5-.2-3 .9-3.8.9-.8 0-2-.9-3.3-.9-1.7 0-3.3 1-4.2 2.5-1.8 3.1-.5 7.7 1.3 10.2.9 1.2 1.9 2.6 3.2 2.6 1.3-.1 1.8-.8 3.3-.8 1.6 0 2 .8 3.3.8 1.4 0 2.3-1.2 3.1-2.5 1-1.4 1.4-2.8 1.4-2.9 0 0-2.8-1.1-2.8-4.2zM13.9 5.2c.7-.8 1.2-2 1-3.2-1 .1-2.2.7-2.9 1.5-.6.7-1.2 1.9-1 3.1 1.1.1 2.2-.6 2.9-1.4z"/></svg>NFC Tools cho iPhone</a>
+          <a href="https://play.google.com/store/apps/details?id=com.wakdev.wdnfc" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M4 2.8v18.4c0 .4.4.6.7.4l10.1-9.6L4.7 2.4c-.3-.2-.7 0-.7.4zM16.3 13.4l2.6 2.5 3-1.7c.6-.4.6-1.3 0-1.6l-3-1.8-2.6 2.6zM15.6 12.7l2.5-2.5L6.4 3.4l9.2 9.3zM15.6 13.4l-9.2 9.2 11.7-6.8-2.5-2.4z"/></svg>NFC Tools cho Android</a>
+        </div></div></li>
+      <li><div>Mở app, chọn mục <b>Ghi</b>, rồi bấm <b>Thêm bản ghi</b>.
+        <div class="ui"><kbd class="hot">Ghi · Write</kbd><span class="arrow">→</span><kbd class="hot">Thêm bản ghi · Add a record</kbd></div></div></li>
+      <li><div>Chọn loại bản ghi <b>URL / URI</b>.
+        <div class="ui"><kbd class="hot">URL / URI</kbd></div></div></li>
+      <li><div>Dán link bạn đã sao chép ở bước 1, rồi bấm <b>Xác nhận</b>.
+        <div class="ui"><kbd>https://instagram.com/ten.cua.ban</kbd><span class="arrow">→</span><kbd class="hot">OK · Validate</kbd></div>
+        <small>Kiểm tra lại: trong danh sách chỉ có <b>một</b> dòng URL và link chỉ có <b>một</b> lần “https://”. Có dòng thừa thì xóa đi.</small></div></li>
+      <li><div>Bấm nút <b>Ghi / … Bytes</b> ở cuối danh sách.
+        <div class="ui"><kbd class="hot">Ghi / 42 Bytes · Write / 42 Bytes</kbd></div>
+        <small>Con số Bytes là dung lượng link, mỗi link khác nhau.</small></div></li>
+      <li><div>Đưa móc khóa sát vào điện thoại và <b>giữ yên</b> tới khi app báo ghi xong.
+        <small><b>iPhone:</b> chạm móc khóa vào <b>phần đỉnh</b> mặt lưng, gần camera, khi hiện bảng “Sẵn sàng quét”. <b>Android:</b> bật NFC trước, chạm vào <b>giữa</b> mặt lưng.</small></div></li>
+    </ol>
+    <div class="warn"><b>Xong!</b> Link của bạn đã được lưu trong móc khóa. Muốn đổi sang link khác sau này, cứ làm lại đúng các bước trên, link mới sẽ ghi đè link cũ.</div>
+    <div class="warn red"><b>Không bấm “Khóa thẻ” (Lock tag).</b> Đây là mục khác trong NFC Tools. Khóa rồi thì <b>không bao giờ đổi được link nữa</b>, kể cả khi bạn đổi tên tài khoản. Bạn chỉ cần dùng mục Ghi.</div>
+    <p class="src">Các bước ghi link dựa theo hướng dẫn chính thức của nhà phát triển NFC Tools: <a href="https://www.wakdev.com/en/knowledge-base/how-to-guides/how-to-write-a-link-url-on-an-nfc-chip.html" target="_blank" rel="noopener">wakdev · How to write a link on an NFC chip</a>.</p>
+  </section>
+
+  <section class="card" id="cham">
+    <h2><span class="n">3</span>Chạm thử</h2>
+    <div class="figure" aria-hidden="true">
+      <svg viewBox="0 0 320 150" fill="none">
+        <rect x="24" y="20" width="76" height="120" rx="14" stroke="#0891b2" stroke-width="3"/>
+        <rect x="50" y="28" width="24" height="4" rx="2" fill="#0891b2" opacity=".35"/>
+        <path d="M120 80c10-12 10-28 0-40M134 92c18-22 18-50 0-72M148 104c26-32 26-72 0-104" stroke="#0891b2" stroke-width="3" stroke-linecap="round" opacity=".55" transform="translate(0 20)"/>
+        <circle cx="240" cy="30" r="14" stroke="#9aa3b5" stroke-width="3"/>
+        <path d="M240 44v12" stroke="#9aa3b5" stroke-width="3"/>
+        <rect x="196" y="56" width="88" height="84" rx="14" fill="#fff" stroke="#c9d0e0" stroke-width="3"/>
+        <rect x="206" y="66" width="68" height="64" rx="9" fill="#0891b2"/>
+        <path d="M222 86h36M222 98h28M222 110h36" stroke="#fff" stroke-width="5" stroke-linecap="round"/>
+      </svg>
+    </div>
+    <ol class="steps">
+      <li><div>Mở khóa màn hình điện thoại (không cần mở app nào).</div></li>
+      <li><div>Đặt <b>mặt lưng</b> điện thoại sát vào móc khóa, giữ yên 1–2 giây.</div></li>
+      <li><div>Bấm vào thông báo hiện lên để mở trang. Nên thử thêm bằng máy của một người bạn.</div></li>
+    </ol>
+    <div class="two">
+      <div class="tile"><b>iPhone</b><p>iPhone XS trở lên tự đọc NFC: chạm vào <b>phần đỉnh</b> mặt lưng, gần camera. iPhone 7 đến X: vuốt mở Trung tâm điều khiển, bấm nút <b>Đọc thẻ NFC</b> rồi chạm (nếu chưa có nút này, thêm trong Cài đặt → Trung tâm điều khiển).</p></div>
+      <div class="tile"><b>Android</b><p>Bật NFC trong <b>Cài đặt → Kết nối</b> (hoặc kéo thanh thông báo, bấm biểu tượng NFC). Chạm vào <b>giữa mặt lưng</b>, chỗ ăng-ten NFC của đa số máy.</p></div>
+    </div>
+  </section>
+
+  <section class="card" id="loi">
+    <h2><span class="n">4</span>Ghi hoặc quét không được?</h2>
+    <h3>Khi ghi link (bước 2)</h3>
+    <ul class="check">
+      <li><span>App báo lỗi ghi: <b>giữ yên</b> móc khóa sát máy lâu hơn, đừng nhấc lên khi chưa báo xong. Thử lại vài vị trí.</span></li>
+      <li><span>App báo <b>không đủ dung lượng</b>: link quá dài. Dùng link rút gọn hoặc link trang gộp (Linktree…), rồi ghi lại.</span></li>
+      <li><span>Chỉ giữ <b>một</b> bản ghi URL trong danh sách. Có nhiều bản ghi thì xóa bớt trước khi bấm Ghi.</span></li>
+    </ul>
+    <h3>Khi chạm để mở (bước 3)</h3>
+    <ul class="check">
+      <li><span>Điện thoại đã <b>mở khóa màn hình</b> và (Android) đã <b>bật NFC</b>.</span></li>
+      <li><span>Chạm đúng vùng ăng-ten: iPhone ở <b>đỉnh máy</b>, Android thường ở <b>giữa lưng máy</b>. Di chuyển chậm vài vị trí và giữ yên 1–2 giây.</span></li>
+      <li><span>Tháo bớt <b>ốp lưng dày, ví da, miếng kim loại hoặc vòng nam châm MagSafe</b>: kim loại chắn sóng NFC.</span></li>
+      <li><span>Chạm mà <b>không mở gì</b>: có thể móc khóa chưa được ghi link. Làm lại bước 2.</span></li>
+      <li><span>Chạm mà <b>mở sai trang</b>: ghi lại link đúng theo bước 2, link mới sẽ ghi đè link cũ.</span></li>
+      <li><span>Vẫn không được? Nhắn shop kèm <b>mã đơn</b> trong mail xác nhận để được hỗ trợ.</span></li>
+    </ul>
+  </section>
+
+  <section class="card" id="bao-quan">
+    <h2><span class="n">5</span>Bảo quản</h2>
+    <ul class="check">
+      <li><span>Móc khóa in 3D bằng nhựa <b>PETG</b>: bền, dẻo, chịu va chạm thường ngày tốt.</span></li>
+      <li><span><b>Tránh nhiệt cao</b>: không để trong cốp xe, taplo ô tô giữa trưa nắng hoặc gần bếp, vì nhựa có thể mềm và cong vênh.</span></li>
+      <li><span>Lau bằng khăn ẩm, không dùng cồn mạnh hoặc dung môi để giữ màu và bề mặt chữ.</span></li>
+      <li><span>Nhựa thừa nhỏ hoặc vân lớp in là đặc điểm của in 3D. Có thể dùng giũa móng mịn để làm nhẵn nhẹ nếu muốn.</span></li>
+    </ul>
+  </section>
+</main>
+
+<footer><div class="wrap"><span>MERCHANDISE V2.0 · TP MERCH</span><span>THPT Trần Phú · TP. Hồ Chí Minh</span></div></footer>
+</body>
+</html>
